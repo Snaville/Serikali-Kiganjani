@@ -26,20 +26,6 @@
 
 <body>
 
-  <script>
-
-    $(document).ready(function() {
-      if ($.cookie('modal_shown') == null) {
-          $.cookie('modal_shown', 'yes', { expires: 7, path: '/' });
-          setTimeout(function(){
-            $("#myModal").modal('show');
-          }, 15000);
-       }
-    });
-    
-    
-    </script>
-
 
 
   <!-- Modal -->
@@ -682,50 +668,83 @@ Kuwa mzalendo, sambaza ujumbe huu kwa watanzania wote!" data-action="share/whats
 </div>
 
 
-   
-  </div>
-    <script src="./assets/jquery.min.js"></script>
-    <script src="./assets/nprogress.min.js"></script>
-    <script src="./assets/bootstrap.bundle.min.js"></script>
-    <script src="./assets/matchHeight.min.js"></script>
-    <script src="./assets/customScrollbar.min.js"></script>
-    <script src="./assets/slick.min.js"></script>
+  
+<script src="./assets/jquery-3.6.0.min.js"></script>
+<script src="./assets/bootstrap.min.js"></script>
+<script src="./assets/jquery.cookie.min.js"></script>
+<script src="./assets/nprogress.min.js"></script>
+<script src="./assets/bootstrap.bundle.min.js"></script>
+<script src="./assets/matchHeight.min.js"></script>
+<script src="./assets/customScrollbar.min.js"></script>
+<script src="./assets/slick.min.js"></script>
 
-    <script src="./assets/owl.carousel.min.js"></script>
-    <script src="./assets/custom.min.js"></script>
-    <script src="./assets/magnific-popup.min.js"></script>
+<script src="./assets/owl.carousel.min.js"></script>
+<script src="./assets/custom.min.js"></script>
+<script src="./assets/magnific-popup.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('.photos').each(function() {
-                $(this).magnificPopup({
-                    type: 'image',
-                    delegate: 'a',
-                    gallery: {
-                        enabled: true
-                    }
-                });
-            })
 
-            $(".meeting-slider").owlCarousel({
-                loop:true,
-                autoplay:true,
-                smartSpeed:1000,
-                autoplayHoverPause:false,
-                dots:true,
-                nav:false,
-                items:1,
-                animateOut: 'fadeOut',
-                animateIn: 'fadeIn',
-                dotsContainer: '.meeting-dots'
+<script>
+
+  $(document).ready(function() {
+    if ($.cookie('modal_shown') == null) {
+        $.cookie('modal_shown', 'yes', { expires: 7, path: '/' });
+        setTimeout(function(){
+          $("#myModal").modal('show');
+        }, 15000);
+     }
+  });
+  
+  
+  </script>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        $('.photos').each(function() {
+            $(this).magnificPopup({
+                type: 'image',
+                delegate: 'a',
+                gallery: {
+                    enabled: true
+                }
             });
+        })
 
+        $(".meeting-slider").owlCarousel({
+            loop:true,
+            autoplay:true,
+            smartSpeed:1000,
+            autoplayHoverPause:false,
+            dots:true,
+            nav:false,
+            items:1,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            dotsContainer: '.meeting-dots'
         });
-        $(".partners_carousel").owlCarousel({ loop:false, autoplay:true, smartSpeed:450, autoplayHoverPause:false, dots:false, nav:false, responsiveClass:true, responsive:{ 0:{ items:2 }, 600:{ items:3 },1000:{ items:5 }},items:5});
-    </script>
 
-    
-    
+    });
+    $(".partners_carousel").owlCarousel({ loop:false, autoplay:true, smartSpeed:450, autoplayHoverPause:false, dots:false, nav:false, responsiveClass:true, responsive:{ 0:{ items:2 }, 600:{ items:3 },1000:{ items:5 }},items:5});
+</script>
+<script>
+function myFunction() {
+var input = document.getElementById("Search");
+var filter = input.value.toLowerCase();
+var nodes = document.getElementsByClassName('col-lg-3');
+
+for (i = 0; i < nodes.length; i++) {
+if (nodes[i].innerText.toLowerCase().includes(filter)) {
+  nodes[i].style.display = "block";
+} else {
+  nodes[i].style.display = "none";
+}
+}
+}
+</script>
+
+
 </body>
 
 </html>
